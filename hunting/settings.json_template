@@ -1,0 +1,4 @@
+{
+    "elasticsearch":"http://es_host:9200/",
+    "virustotal":"virustotal_api_key",
+}
