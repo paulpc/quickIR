@@ -9,6 +9,7 @@ If you want to try it on your own infrastructure here are some helpful files:
 - kibana.yml: kibana config example. Make sure to have the right source port.
 - kibana.service: systemd configuration to set up a kibana service. Please make sure to set the apropriate location for the kibana executable: `ExecStart=/opt/kibana/bin/kibana`
 - logstash.conf: configuration file for logstash to listen on 1514 and store the results in the ioc_v2 index or the executables index
+- Microsoft.PowerShellISE_profile.ps1 and Microsoft.PowerShell_profile.ps1 are sample profile files for powershell to be used on the responder's machine. You can just add the function to your profile if you have a profile already, just make sure to *change* `(New-Object System.Net.Webclient).DownloadString('http://[change me]/quickIR.ps1')}` to have the IP of the ELK server (or whatever server you have to host the quickIR.ps1 file).
 
 To get you started, I included some sample data in the ./sample folder. Set the logstash server in `TCP_IP = '127.0.0.1'` and the logstash port in `TCP_PORT = 1514`. You can just run the python file to pre-populate the ioc_v2 index.
 
